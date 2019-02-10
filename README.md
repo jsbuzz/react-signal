@@ -1,5 +1,7 @@
 # react-signal
-Communication and state management library for React
+Communication and state management library for React.
+
+Currently being developed as part of a demo project hosted here: https://github.com/jsbuzz/todo-react-signal
 
 ## Create Namespaces
 Namespaces manage state and facilitate publishing and subscribing to events.
