@@ -5,6 +5,8 @@ Communication and state management library for React
 Namespaces manage state and facilitate publishing and subscribing to events.
 
 ```javascript
+import { UpdateActive } from './events';
+
 export const AppSpace = NameSpace.schema(() => ({
   activeTodos: [
     InitState, set(0),
@@ -38,6 +40,8 @@ export Connect(Summary, ({ activeTodos }) => ({ activeTodos }));
 
 **Connect to events**
 ```jsx
+import { AddTodo } from './events';
+
 export const LastTodo = ({ title }) => (<div>Last todo added: {title}</div>);
 
 export const LastTodoSignal = Signal(setProps => [
