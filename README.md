@@ -4,6 +4,17 @@ Communication and state management library for React
 ## Create Namespaces
 Namespaces manage state and facilitate publishing and subscribing to events.
 
+```javascript
+export const AppSpace = NameSpace.schema(() => ({
+  activeTodos: [
+    InitState, set(0),
+
+    // update number of active todos
+    UpdateActive, activeTodos => ({ active }) => active + activeTodos
+  ]
+}));
+```
+
 ```jsx
 <NameSpace schema={AppSpace} name="AppSpace">
   <Summary />
